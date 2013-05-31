@@ -1,4 +1,4 @@
 GuitarPedal
 ===========
 
-Arduono Guitar pedal
+Arduino Guitar pedal
