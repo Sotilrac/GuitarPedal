@@ -19,8 +19,11 @@
  
  */
 
-// These constants won't change.  They're used to give names
-// to the pins used:
+#include <SoftwareSerial.h>
+
+SoftwareSerial sevenSeg(2, 3); // RX, TX
+char buf[12];
+
 const int analogInPin = A1;  // Analog input pin that the potentiometer is attached to
 const int analogOutPin = A2; // Analog output pin that the LED is attached to
 const int pedalPin = A0;
@@ -82,17 +85,7 @@ delay(2);
 * and show it on a serial 7-segment disply.
 */
 
-#include <SoftwareSerial.h>
 
-SoftwareSerial sevenSeg(2, 3); // RX, TX
-const int sensorPin[] = {A0, A1};
-const int sensorNum = 2;
-const int buttonPin = 4;
-const int countDelay = 400; //min time between counts
-int threshold[] = {300, 300};
-int count = 0;
-int baseline[] = {0, 0};
-char buf[12];
 
 
 void setup()
